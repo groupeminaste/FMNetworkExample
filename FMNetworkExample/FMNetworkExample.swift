@@ -112,7 +112,7 @@ class FMNetworkExample {
                                 //If nefemto is false, you can simply compare network.connected with the nrp property
                                 if esim.network.connected == esim.fmobile?.nrp {
                                     // The eSIM is connected on its national roaming network protocol! Do not forget to compare the card.mcc/mnc with the network.mcc/mnc to ensure the eSIM card is not connected on another network, like aboard.
-                                    if esim.network.mcc == esim.fmobile?.mcc && esim.network.mnc == esim.fmobile?.chasedmnc {
+                                    if esim.network.mcc == esim.card.mcc && esim.network.mnc == esim.fmobile?.chasedmnc {
                                         print("The eSIM is connected on the national roaming network!")
                                     } else {
                                         print("The eSIM is connected on another network (aboard or exceptional national network).")
@@ -124,7 +124,7 @@ class FMNetworkExample {
                                 // If nrfemto is true, you will need to do a speedtest on top of that, using the stms property, indicating the maximum speed of the National Roaming network in Mbps.
                                 if esim.network.connected == esim.fmobile?.nrp {
                                     // The eSIM is connected on its national roaming network protocol! Do not forget to compare the card.mcc/mnc with the network.mcc/mnc to ensure the eSIM card is not connected on another network, like aboard.
-                                    if esim.network.mcc == esim.fmobile?.mcc && esim.network.mnc == esim.fmobile?.chasedmnc {
+                                    if esim.network.mcc == esim.card.mcc && esim.network.mnc == esim.fmobile?.chasedmnc {
                                         print("You need to perform a speedtest using the stms \(esim.fmobile?.stms ?? 0.0) reference as your maximum speed for the national roaming network.")
                                     } else {
                                         print("The eSIM is connected on another network (aboard or exceptional national network).")
@@ -135,8 +135,11 @@ class FMNetworkExample {
                             }
                         } else {
                             // The nrdec property is equal to false, which means you can use the standard mcc/mnc to monitor the national roaming directly.
-                            if esim.card.mcc == esim.network.mcc && esim.card.mnc != esim.network.mnc {
+                            print("The carrier has not declared its national roaming agreement, therefore the chasedmnc property should be equal to the itimnc property. \(esim.fmobile?.chasedmnc ?? "null")/\(esim.fmobile?.itimnc ?? "null").")
+                            if esim.network.mcc == esim.card.mcc && esim.network.mnc == esim.fmobile?.chasedmnc {
                                 print("The eSIM is connected on the national roaming network!")
+                            } else if esim.network.mcc == esim.card.mcc && esim.network.mnc != esim.card.mnc {
+                                print("The eSIM is connected on another national roaming network!")
                             } else {
                                 print("The eSIM is not connected on the national roaming network!")
                             }
