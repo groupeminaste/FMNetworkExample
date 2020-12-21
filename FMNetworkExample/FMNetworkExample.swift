@@ -1,3 +1,21 @@
+/*
+ *  Copyright (C) 2020 Groupe MINASTE
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along
+ * with this program; if not, write to the Free Software Foundation, Inc.,
+ * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ *
+ */
 //
 //  FMNetworkExample.swift
 //  FMNetworkExample
@@ -15,7 +33,7 @@ import CoreTelephony
 
 class FMNetworkExample {
     
-    static func run_example_current() {
+    static func runExampleCurrent() {
         
         // In this example, we are going to make some basic operations on the current SIM card.
         // Let's load the current SIM card data.
@@ -65,7 +83,7 @@ class FMNetworkExample {
         }
     }
     
-    static func run_example_esim_with_fmobile() {
+    static func runExampleEsimWithFmobile() {
         // Of course, the run_example_current() would work exactly the same way by using the .sim or .esim type, instead it would be quite useless to check the SIM type, as you know what to expect.
         // In this example, we are going to use the FMobile API service to get more data about a SIM card.
         // Let's load the eSIM card data
