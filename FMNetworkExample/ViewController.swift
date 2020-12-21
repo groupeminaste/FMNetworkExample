@@ -12,6 +12,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        
+        FMNetworkExample.run_example_current()
+        
+        FMNetworkExample.run_example_esim_with_fmobile()
+        
+        
     }
 
 

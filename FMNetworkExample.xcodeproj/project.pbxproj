@@ -3,29 +3,26 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		EDCC3149259137130022A916 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCC3148259137130022A916 /* AppDelegate.swift */; };
-		EDCC314B259137130022A916 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCC314A259137130022A916 /* SceneDelegate.swift */; };
 		EDCC314D259137130022A916 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCC314C259137130022A916 /* ViewController.swift */; };
-		EDCC3150259137130022A916 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDCC314E259137130022A916 /* Main.storyboard */; };
-		EDCC3153259137130022A916 /* FMNetworkExample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EDCC3151259137130022A916 /* FMNetworkExample.xcdatamodeld */; };
 		EDCC3155259137190022A916 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDCC3154259137190022A916 /* Assets.xcassets */; };
 		EDCC3158259137190022A916 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDCC3156259137190022A916 /* LaunchScreen.storyboard */; };
+		EDCC3162259137D70022A916 /* FMNetwork in Frameworks */ = {isa = PBXBuildFile; productRef = EDCC3161259137D70022A916 /* FMNetwork */; };
+		EDCC3169259138BE0022A916 /* FMNetworkExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCC3168259138BE0022A916 /* FMNetworkExample.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EDCC3145259137130022A916 /* FMNetworkExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FMNetworkExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDCC3148259137130022A916 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EDCC314A259137130022A916 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		EDCC314C259137130022A916 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		EDCC314F259137130022A916 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		EDCC3152259137130022A916 /* FMNetworkExample.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FMNetworkExample.xcdatamodel; sourceTree = "<group>"; };
 		EDCC3154259137190022A916 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EDCC3157259137190022A916 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EDCC3159259137190022A916 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDCC3168259138BE0022A916 /* FMNetworkExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FMNetworkExample.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDCC3162259137D70022A916 /* FMNetwork in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,13 +57,11 @@
 			isa = PBXGroup;
 			children = (
 				EDCC3148259137130022A916 /* AppDelegate.swift */,
-				EDCC314A259137130022A916 /* SceneDelegate.swift */,
 				EDCC314C259137130022A916 /* ViewController.swift */,
-				EDCC314E259137130022A916 /* Main.storyboard */,
+				EDCC3168259138BE0022A916 /* FMNetworkExample.swift */,
 				EDCC3154259137190022A916 /* Assets.xcassets */,
 				EDCC3156259137190022A916 /* LaunchScreen.storyboard */,
 				EDCC3159259137190022A916 /* Info.plist */,
-				EDCC3151259137130022A916 /* FMNetworkExample.xcdatamodeld */,
 			);
 			path = FMNetworkExample;
 			sourceTree = "<group>";
@@ -86,6 +82,9 @@
 			dependencies = (
 			);
 			name = FMNetworkExample;
+			packageProductDependencies = (
+				EDCC3161259137D70022A916 /* FMNetwork */,
+			);
 			productName = FMNetworkExample;
 			productReference = EDCC3145259137130022A916 /* FMNetworkExample.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +112,9 @@
 				Base,
 			);
 			mainGroup = EDCC313C259137120022A916;
+			packageReferences = (
+				EDCC3160259137D70022A916 /* XCRemoteSwiftPackageReference "FMNetwork" */,
+			);
 			productRefGroup = EDCC3146259137130022A916 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -129,7 +131,6 @@
 			files = (
 				EDCC3158259137190022A916 /* LaunchScreen.storyboard in Resources */,
 				EDCC3155259137190022A916 /* Assets.xcassets in Resources */,
-				EDCC3150259137130022A916 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,23 +142,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDCC314D259137130022A916 /* ViewController.swift in Sources */,
+				EDCC3169259138BE0022A916 /* FMNetworkExample.swift in Sources */,
 				EDCC3149259137130022A916 /* AppDelegate.swift in Sources */,
-				EDCC3153259137130022A916 /* FMNetworkExample.xcdatamodeld in Sources */,
-				EDCC314B259137130022A916 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		EDCC314E259137130022A916 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EDCC314F259137130022A916 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		EDCC3156259137190022A916 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -293,6 +285,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZL9396WK65;
 				INFOPLIST_FILE = FMNetworkExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -312,6 +305,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZL9396WK65;
 				INFOPLIST_FILE = FMNetworkExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -346,18 +340,24 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCVersionGroup section */
-		EDCC3151259137130022A916 /* FMNetworkExample.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				EDCC3152259137130022A916 /* FMNetworkExample.xcdatamodel */,
-			);
-			currentVersion = EDCC3152259137130022A916 /* FMNetworkExample.xcdatamodel */;
-			path = FMNetworkExample.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
+/* Begin XCRemoteSwiftPackageReference section */
+		EDCC3160259137D70022A916 /* XCRemoteSwiftPackageReference "FMNetwork" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/GroupeMINASTE/FMNetwork.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
 		};
-/* End XCVersionGroup section */
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EDCC3161259137D70022A916 /* FMNetwork */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EDCC3160259137D70022A916 /* XCRemoteSwiftPackageReference "FMNetwork" */;
+			productName = FMNetwork;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EDCC313D259137120022A916 /* Project object */;
 }
